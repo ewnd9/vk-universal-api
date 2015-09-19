@@ -1,6 +1,6 @@
 {
   "name": "vk-universal-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "vk-universal-api",
   "main": "dist/index.js",
   "scripts": {
@@ -17,7 +17,9 @@
     "url": "git+https://github.com/ewnd9/vk-universal-api.git"
   },
   "keywords": [
-    "vk", "api", "universal"
+    "vk",
+    "api",
+    "universal"
   ],
   "author": "ewnd9 <ewndnine@gmail.com>",
   "license": "MIT",
