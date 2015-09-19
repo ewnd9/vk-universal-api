@@ -1,0 +1,32 @@
+{
+  "name": "vk-universal-api",
+  "version": "0.0.1",
+  "description": "vk-universal-api",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "mocha --require babel/register",
+    "test:watch": "mocha -w --require babel/register",
+    "prebuild": "rm -rf dist && mkdir dist",
+    "build": "babel -d dist/ src/",
+    "prepublish": "npm run build"
+  },
+  "preferGlobal": "false",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewnd9/vk-universal-api.git"
+  },
+  "keywords": [
+    "vk", "api", "universal"
+  ],
+  "author": "ewnd9 <ewndnine@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "universal-api": "0.0.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5"
+  }
+}
