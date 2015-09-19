@@ -11,7 +11,7 @@ $ npm install vk-universal-api --save
 ## Usage
 
 ```javascript
-var api = require('./../src/index');
+var api = require('vk-universal-api');
 api.setToken(<string>);
 
 api.method('audio.search', { q: 'noisia' }).then(function(result) {

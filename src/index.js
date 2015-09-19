@@ -11,15 +11,19 @@ var api = new UniversalApi('https://api.vk.com/method/', {
   },
   transformResponse: function(res, resolve, reject) {
     if (res.body.error) {
-      console.log(res.body.error);
+      // console.log(res.body.error);
       reject(res.body.error);
     } else if (res.body.response) {
-      var count = res.body.response.shift();
+      if (res.body.response.shift) {
+        var count = res.body.response.shift();
 
-      resolve({
-        meta: count,
-        items: res.body.response
-      });
+        resolve({
+          meta: count,
+          items: res.body.response
+        });
+      } else {
+        resolve(res.body.response);
+      }
     }
   }
 });
