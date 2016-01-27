@@ -1,6 +1,6 @@
 # vk-universal-api
 
-works both on server and in browser via jsonp
+> Convenience wrapper for [vk.com api](https://vk.com/dev/methods) to interact both from node and browsers (via bundlers like browserify or webpack)
 
 ## Install
 
@@ -11,13 +11,17 @@ $ npm install vk-universal-api --save
 ## Usage
 
 ```javascript
-var api = require('vk-universal-api');
-api.setToken(<string>);
+import api from 'vk-universal-api';
+api.setToken('<string>');
 
-api.method('audio.search', { q: 'noisia' }).then(function(result) {
-  // result
-});
+api
+  .get('audio.search', { q: 'noisia' })
+  .then(([count, ...audios]) => {});
 ```
+
+## Changelog
+
+- `v0.1.0` - breaking changes due to `universal-api` refactoring
 
 ## License
 

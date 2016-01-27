@@ -24,7 +24,7 @@
   "author": "ewnd9 <ewndnine@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "universal-api": "0.0.1"
+    "universal-api": "^0.1.0"
   },
   "devDependencies": {
     "babel": "^5.8.21",
