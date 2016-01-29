@@ -3,15 +3,21 @@
   "version": "0.1.0",
   "description": "vk-universal-api",
   "main": "dist/index.js",
+  "files": [ "dist" ],
   "scripts": {
     "start": "node cli.js",
-    "test": "mocha --require babel/register",
-    "test:watch": "mocha -w --require babel/register",
+    "test": "npm run test:node && npm run karma",
+    "test:node": "mocha --require babel/register test/api-spec",
+    "test:node:watch": "mocha -w --require babel/register test/api-spec",
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel -d dist/ src/",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "test:webpack:build": "webpack --config test/fixtures/webpack.config.js",
+    "test:browserify:build": "browserify test/fixtures/index.js > test/fixtures/bundles/app.browserify.bundle.js",
+    "karma:webpack": "karma start karma.webpack.conf.js",
+    "karma:browserify": "karma start karma.browserify.conf.js",
+    "karma": "npm run karma:webpack && npm run karma:browserify"
   },
-  "preferGlobal": "false",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ewnd9/vk-universal-api.git"
@@ -28,7 +34,17 @@
   },
   "devDependencies": {
     "babel": "^5.8.21",
+    "babel-loader": "^5.4.0",
+    "browserify": "^13.0.0",
     "chai": "^3.2.0",
-    "mocha": "^2.2.5"
+    "karma": "^0.13.19",
+    "karma-env-preprocessor": "^0.1.1",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.2.5",
+    "phantomjs": "^2.1.3",
+    "phantomjs-prebuilt": "^2.1.3",
+    "webpack": "^1.12.12"
   }
 }

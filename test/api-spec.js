@@ -16,7 +16,7 @@ describe('api', () => {
       expect(audio.length).to.equal(30);
 
       done();
-    });
+    }).catch(err => done(err));
   });
 
   it('wall.editComment throw error', function(done) {
