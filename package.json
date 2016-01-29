@@ -1,9 +1,11 @@
 {
   "name": "vk-universal-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vk-universal-api",
   "main": "dist/index.js",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "node cli.js",
     "test": "npm run test:node && npm run karma",
