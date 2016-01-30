@@ -1,6 +1,6 @@
 # vk-universal-api
 
-> Convenience wrapper for [vk.com api](https://vk.com/dev/methods) to interact both from node and browsers (via bundlers like browserify or webpack)
+> Wrapper for [vk.com api](https://vk.com/dev/methods) to interact both from node and browsers (via bundlers like browserify or webpack)
 
 ## Install
 

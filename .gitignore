@@ -2,4 +2,3 @@
 /dist/
 *.log
 play.js
-test/fixtures/bundles/*
