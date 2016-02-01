@@ -1,6 +1,6 @@
 {
   "name": "vk-universal-api",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "vk-universal-api",
   "main": "dist/index.js",
   "files": [
